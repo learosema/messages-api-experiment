@@ -14,5 +14,5 @@ function createRandomMessage(id) {
 
 const data = Array(2000)
   .fill(0)
-  .map((_, idx) => createRandomMessage(idx));
+  .map((_, idx) => createRandomMessage(idx + 1));
 fs.writeFileSync('data.json', JSON.stringify(data, null, 2), 'utf-8');
